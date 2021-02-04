@@ -20,6 +20,7 @@ PAGEDIR = $(if $(wildcard out),out,.)
 C44 = c44
 CJB2 = cjb2
 CONVERT = convert
+IDENTIFY = identify
 DJVUMAKE = djvumake
 DJVUEXTRACT = djvuextract
 DJVM = djvm
@@ -29,8 +30,8 @@ THRESHOLD = 1%
 COVER_DPI = 100
 
 PAGEFILES = $(sort $(wildcard $(PAGEDIR)/*$(PAGESUF)))
-BILEVELS = $(shell identify $(PAGEFILES) | sed -n -e '/Bilevel/ { s/^\(.*\$(PAGESUF)\)[[:space:]].*$$/\1/p; }')
-MIXED = $(shell identify $(PAGEFILES) | sed -n -e '/Bilevel/ d' -e 's/^\(.*\$(PAGESUF)\)[[:space:]].*$$/\1/p')
+BILEVELS = $(shell $(IDENTIFY) $(PAGEFILES) | sed -n -e '/Bilevel/ { s/^\(.*\$(PAGESUF)\)[[:space:]].*$$/\1/p; }')
+MIXED = $(shell $(IDENTIFY) $(PAGEFILES) | sed -n -e '/Bilevel/ d' -e 's/^\(.*\$(PAGESUF)\)[[:space:]].*$$/\1/p')
 COVERS = $(if $(MIXED),$(if $(filter $(firstword $(MIXED)),$(firstword $(PAGEFILES))),$(firstword $(MIXED))) $(if $(filter $(lastword $(MIXED)),$(lastword $(PAGEFILES))),$(lastword $(MIXED))))
 PAGES = $(BILEVELS) $(MIXED)
 
@@ -78,7 +79,7 @@ $(WORKDIR)/%.bw.djvu: $(PAGEDIR)/%$(PAGESUF) | workdir
 # Mixed pages (covers and pages with tonal images)
 
 $(WORKDIR)/%.dpi: $(PAGEDIR)/%$(PAGESUF) | workdir
-	identify -format '%x\n' $< >$@
+	$(IDENTIFY) -format '%x\n' $< >$@
 
 $(WORKDIR)/%.ppm: $(PAGEDIR)/%$(PAGESUF) | workdir
 	$(CONVERT) $< $@
