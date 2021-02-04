@@ -144,6 +144,7 @@ Option  | Comment                            | Default value
 # License
 
 `makedjvu` — produce DjVu book from a set of page images.
+
 Copyright (C) 2021  Pavel Avrorov.
 
 This program is free software: you can redistribute it and/or modify
