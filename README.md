@@ -1,7 +1,8 @@
-# makedjvu — A simple Makefile script to produce DjVu book from a set of page images
+# `makedjvu` — A simple Makefile script to produce DjVu book from a set of page images
 
-The script were tested with ScanTailor output, but will probably work
-with any other bilevel and mixed output too.
+The script were tested with [ScanTailor
+Advanced](https://github.com/4lex4/scantailor-advanced) output, but
+will probably work with any other bilevel and mixed output too.
 
 
 ## Installation and requirements
@@ -67,7 +68,7 @@ Workdir: djvudir
 ```
 
 First of all, the book DjVu file is named after the name of the
-folder the `Makefile` resides. Please not, however, that any spaces in
+folder the `Makefile` resides. Please note, however, that any spaces in
 the filename are substituted by `_` in order to make the filename
 compatible with `make`.
 
@@ -134,7 +135,7 @@ Option  | Comment                            | Default value
 `DJVM`     | Name (path) of `djvm` command.         | `djvm`
 `C44_OPTS` | Options for `c44` command.             | _(no options)_
 `CJB2_OPTS` | Options for `cjb2` command.           | `-lossy -clean`
-`THRESHOLD` | Threshold value for mixed page separation. | 1%
+`THRESHOLD` | White threshold value for mixed page separation. | 1%
 `COVER_DPI` | DPI to downsample cover images to.    | 100
 `NAME`      | Book base name.                       | After the name of the current folder with spaces substituted by `_`.
 `FILENAME`  | Book file name.                        | `NAME` + `.djvu`
