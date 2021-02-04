@@ -4,6 +4,7 @@ The script were tested with [ScanTailor
 Advanced](https://github.com/4lex4/scantailor-advanced) output, but
 will probably work with any other bilevel and mixed output too.
 
+**Для описания на русском языке обратитесь к [README.rus.md](https://github.com/pavrorov/makedjvu/blob/main/README.rus.md).**
 
 ## Installation and requirements
 
