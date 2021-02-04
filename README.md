@@ -121,23 +121,24 @@ By the above command the script will look for PNG image files in the
 
 The complete list of currently supported options:
 
-| **Option** | **Comment**                            | **Default value** |
-| `PAGEDIR`  | Page image directory.                  | `out`             |
-| `PAGESUF`  | Image file suffix (including the dot). | `.tif`            |
-| `C44`      | Name (path) of `c44` command.          | `c44`             |
-| `CJB2`     | Name (path) of `cjb2` command.         | `cjb2`            |
-| `CONVERT`  | Name (path) of `convert` command.      | `convert`         |
-| `IDENTIFY` | Name (path) of `identify` command.     | `identify`        |
-| `DJVUMAKE` | Name (path) of `djvumake` command.     | `djvumake`        |
-| `DJVUEXTRACT` | Name (path) of `djvuextract` command. | `djvuextract`   |
-| `DJVM`     | Name (path) of `djvm` command.         | `djvm`            |
-| `C44_OPTS` | Options for `c44` command.             | _(no options)_    |
-| `CJB2_OPTS` | Options for `cjb2` command.           | `-lossy -clean`   |
-| `THRESHOLD` | Threshold value for mixed page separation. | 1%           |
-| `COVER_DPI` | DPI to downsample cover images to.    | 100               |
-| `NAME`      | Book base name.                       | After the name of the current folder with spaces substituted by `_`. |
-| `FILENAME`  | Book file name.                        | `NAME` + `.djvu`  |
-| `WORKDIR`   | Name of the directory for intermediate files. | `djvudir` |
+Option  | Comment                            | Default value
+------- | ---------------------------------- | -------------
+`PAGEDIR`  | Page image directory.                  | `out`
+`PAGESUF`  | Image file suffix (including the dot). | `.tif`
+`C44`      | Name (path) of `c44` command.          | `c44`
+`CJB2`     | Name (path) of `cjb2` command.         | `cjb2`
+`CONVERT`  | Name (path) of `convert` command.      | `convert`
+`IDENTIFY` | Name (path) of `identify` command.     | `identify`
+`DJVUMAKE` | Name (path) of `djvumake` command.     | `djvumake`
+`DJVUEXTRACT` | Name (path) of `djvuextract` command. | `djvuextract`
+`DJVM`     | Name (path) of `djvm` command.         | `djvm`
+`C44_OPTS` | Options for `c44` command.             | _(no options)_
+`CJB2_OPTS` | Options for `cjb2` command.           | `-lossy -clean`
+`THRESHOLD` | Threshold value for mixed page separation. | 1%
+`COVER_DPI` | DPI to downsample cover images to.    | 100
+`NAME`      | Book base name.                       | After the name of the current folder with spaces substituted by `_`.
+`FILENAME`  | Book file name.                        | `NAME` + `.djvu`
+`WORKDIR`   | Name of the directory for intermediate files. | `djvudir`
 
 
 # License
