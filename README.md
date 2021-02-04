@@ -1,4 +1,4 @@
-# makedjvu --- A simple Makefile script to produce DjVu book from a set of page images
+# makedjvu — A simple Makefile script to produce DjVu book from a set of page images
 
 The script were tested with ScanTailor output, but will probably work
 with any other bilevel and mixed output too.
@@ -143,7 +143,7 @@ Option  | Comment                            | Default value
 
 # License
 
-`makedjvu` --- produce DjVu book from a set of page images.
+`makedjvu` — produce DjVu book from a set of page images.
 Copyright (C) 2021  Pavel Avrorov.
 
 This program is free software: you can redistribute it and/or modify
