@@ -44,7 +44,7 @@ available on the system: `make`, `tr`, `cat`, `sed`, `identify`,
 
 ### Basic usage
 
-To produce the book `.djvu` file using the default options, just
+To produce the book DjVu file using the default options, just
 enter:
 
 ```
@@ -66,7 +66,7 @@ Cover dpi: 100
 Workdir: djvudir
 ```
 
-First of all, the book `.djvu` file is named after the name of the
+First of all, the book DjVu file is named after the name of the
 folder the `Makefile` resides. Please not, however, that any spaces in
 the filename are substituted by `_` in order to make the filename
 compatible with `make`.
@@ -92,7 +92,7 @@ foreground parts completely black.
 The next notable parameter is the DPI for cover pages. While the other
 (including the mixed ones) pages of the book are processed as are, the
 cover pages are _downsampled_ by default. Why? Because from my point
-of view it isn't good to make the resulting `.djvu` file 3-5 times
+of view it isn't good to make the resulting DjVu file 3-5 times
 bigger than it could be just to have the covers included.
 
 The last info line is the name of the working directory that is used
